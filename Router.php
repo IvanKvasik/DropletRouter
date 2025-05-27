@@ -1,7 +1,7 @@
 <?php
 namespace Router;
 class Router{
-	public static function all(string $URI, $callback){
+	public static function any(string $URI, $callback){
 		$currentURI = $_SERVER['REQUEST_URI'];
 		$expectedParts = explode('/', $URI);
 		$currentParts = explode('/', $currentURI);
@@ -26,7 +26,7 @@ class Router{
 	}
 	public static function request(string $URI, $callback, string $method){
 		if($_SERVER['REQUEST_METHOD'] === $method){
-			self::all($URI, $callback);
+			self::any($URI, $callback);
 		}
 	}
 }
