@@ -5,7 +5,7 @@
 
 The `Router` class only contains two static methods for handling requests with specific URI template:
 
-`any(string $URI, callable $callback)` - used to handle all types of requests
+`any(string $URI, callable $callback)` - used to handle any type of requests
 
 `request(string $URI, callable $callback, string $method)` - used to handle specific type of requests
 
